@@ -1,0 +1,45 @@
+body, html { 
+	font-size: 100%; 	
+	padding: 0; 
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	/*max-width: 69em;*/
+	height: 60px;
+	padding-bottom: 10px;	
+	background-color: #fff;	
+	z-index: 0;
+}	
+
+header #logo{
+	cursor: pointer;
+}
+
+header .logo{
+	width: 10%;
+	height: 100%;
+	background-image: url(../images/kkday_logo.png);
+	
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 100px;	
+	display: inline-block;
+	margin-top: 5px;
+	z-index: 9;
+
+}
+
+header .menu{
+	width: 30%;
+	height: 60px;
+	line-height: 60px;
+	float: right;
+	margin-right: 0;
+	color: #888;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 15px;
+}
