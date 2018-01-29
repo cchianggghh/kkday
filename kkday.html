@@ -1,21 +1,17 @@
-<?php 
-	require_once("connDB.php");	
-	$sql1 = "SELECT * FROM `members`" ;	
-	$result1 = mysqli_query($conn,$sql1);	
-?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>KKday - 當地旅遊,在地旅行,旅遊體驗 - KKday</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-     
+
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/j_head-style.css">
 	<link rel="stylesheet" href="css/j_welcome.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/table.css">
 	<link rel="stylesheet" href="css/mobile.css">
@@ -27,152 +23,255 @@
 	<script src="js/j_slide.js"></script>
 	<script src="js/j_block.js"></script>
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-	<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>	
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-	
+	<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 	<!--<script src="js/slick.min.js"></script>-->
-	
-	<script src="js/j_check.js"></script>	
-	
+
+	<script src="js/j_check.js"></script>
+
 	<script src="js/j_script.js"></script>
 	<script src="js/main.js"></script>
-	
-	
-<!--*********************************************************************-->
 
-<!--*********************************************************************-->
-			
+
+	<!--*********************************************************************-->
+
+	<!--*********************************************************************-->
+
 </head>
-<body id="body">	
+
+<body id="body">
 	<div id="block-layer"></div>
-	<div id="register"><h2>登入kkday</h2><i id="cross3" class="fa fa-times" style="font-size:34px;color:#555;" onclick="back()"></i>
-	<hr>
-		<div class="j_reg_logo" ><image class="j_fb" src="images/fb100.png"></image>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<image class="j_gg" src="images/gg100.png"></image>
-		</div> 
+	<div id="register">
+		<h2>登入kkday</h2>
+		<i id="cross3" class="fa fa-times" style="font-size:34px;color:#555;" onclick="back()"></i>
+		<hr>
+		<div class="j_reg_logo">
+			<image class="j_fb" src="images/fb100.png"></image>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<image class="j_gg" src="images/gg100.png"></image>
+		</div>
 		<div style="text-align: center; height: 40px; line-height: 40px;">or
 		</div>
-		<div class="j_kk_login"><h3>KKday會員帳號登入</h3>
+		<div class="j_kk_login">
+			<h3>KKday會員帳號登入</h3>
 		</div>
 		<!--<form action="register.php" method="post">-->
 		<form action="verify.php" method="post">
-		<input id="j_login_mail" class="j_login_mail" name="mail" type="text" placeholder="電子郵件信箱"><br>
-		<input id="j_login_pw" class="j_login_pw" name="pw" type="text" placeholder="密碼"><br>
-		<input class="j_submit" type="submit" value="登入" onclick="back()">		
+			<input id="j_login_mail" class="j_login_mail" name="mail" type="text" placeholder="電子郵件信箱">
+			<br>
+			<input id="j_login_pw" class="j_login_pw" name="pw" type="text" placeholder="密碼">
+			<br>
+			<input class="j_submit" type="submit" value="登入" onclick="back()">
 		</form>
-		<div id="j_forgot"><span id="forgot_span" onclick="show1()">忘記密碼?</span> │ <span class="j_register"> <a href="register.php">免費註冊</a></span>
-		<div id="partner">
-			企業會員登入
-		</div>
+		<div id="j_forgot">
+			<span id="forgot_span" onclick="show1()">忘記密碼?</span> │
+			<span class="j_register">
+				<a href="register.php">免費註冊</a>
+			</span>
+			<div id="partner">
+				企業會員登入
+			</div>
 		</div>
 	</div>
-<!-- ************************************************* -->	
+	<!-- ************************************************* -->
 	<div id="block-layer1"></div>
-	<div id="j_forgot_pw"><h2>忘記密碼</h2><a href="kkday.html"> <i id="cross4" class="fa fa-times" style="font-size:34px;color:#555;"></i></a>
-	<hr>
-		<div class="j_reg_logo" ><image class="j_fb" src="images/fb100.png"></image>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<image class="j_gg" src="images/gg100.png"></image>
-		</div> 
+	<div id="j_forgot_pw">
+		<h2>忘記密碼</h2>
+		<a href="kkday.html">
+			<i id="cross4" class="fa fa-times" style="font-size:34px;color:#555;"></i>
+		</a>
+		<hr>
+		<div class="j_reg_logo">
+			<image class="j_fb" src="images/fb100.png"></image>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<image class="j_gg" src="images/gg100.png"></image>
+		</div>
 		<div style="text-align: center; height: 80px; line-height: 80px;">or
 		</div>
-		<div class="j_reset_pw"><h3>重設KKday會員密碼</h3>
+		<div class="j_reset_pw">
+			<h3>重設KKday會員密碼</h3>
 		</div>
 		<!-- 
 		<form action="verify.php" method="post">-->
 		<form action="verify1.php" method="post">
-		<input id="j_login_mail1" class="j_login_mail" name="mail" type="text" placeholder="電子郵件信箱"><br>
-		<p id="j_result"></p><br>
-		
-		<input id="j_submit1" class="j_submit" type="submit" value="重新設定密碼" >		
+			<input id="j_login_mail1" class="j_login_mail" name="mail" type="text" placeholder="電子郵件信箱">
+			<br>
+			<p id="j_result"></p>
+			<br>
+
+			<input id="j_submit1" class="j_submit" type="submit" value="重新設定密碼">
 		</form>
-		
-		<div id="j_forgot1"><span id="forgot_span" onclick="back1()">登入kkday</span> │ <span class="j_register"> <a href="register.php">免費註冊</a></span>
-		<div id="partner">
-			企業會員登入
-		</div>
+
+		<div id="j_forgot1">
+			<span id="forgot_span" onclick="back1()">登入kkday</span> │
+			<span class="j_register">
+				<a href="register.php">免費註冊</a>
+			</span>
+			<div id="partner">
+				企業會員登入
+			</div>
 		</div>
 	</div>
 
-	
+
 	<header class="header">
 		<div id="logo" class="logo" onclick="window.location.href='https://www.kkday.com/zh-tw/';"></div>
-		
-		<div id="menu" class="menu" >							
-			<span ><img src="images/tw1.png"></span><span id="showRight0">繁體中文</span><span ><img src="images/arrows10.png"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="showRight1">TWD</span><span><img src="images/arrows10.png"></span><span id="showTop1" onclick="show()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/human12-1.png">&nbsp;登入/註冊</span>					
-		</div>	
+
+		<div id="menu" class="menu">
+			<span>
+				<img src="images/tw1.png">
+			</span>
+			<span id="showRight0">繁體中文</span>
+			<span>
+				<img src="images/arrows10.png">
+			</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span id="showRight1">TWD</span>
+			<span>
+				<img src="images/arrows10.png">
+			</span>
+			<span id="showTop1" onclick="show()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="images/human12-1.png">&nbsp;登入/註冊</span>
+		</div>
 	</header>
 
 
-	<div id="mwt_mwt_slider_scroll0">		 
+	<div id="mwt_mwt_slider_scroll0">
 		<div id="mwt_slider_content0">
-		    <ol class="menu-slider-right" id="menu-slider-right0"  >
-				<li><i id="cross1" class="fa fa-times" style="font-size:24px;color:#555;"></i></li><hr>
-				<li><h3>現在選擇國家</h3></li><hr>
-				<li><a href="https://www.kkday.com/zh-tw"><img src="images/tw1.png">台灣</a></li><hr>
-				<li><h3>所有國家</h3></li><hr>
-				<!--<li><a href="en.html"><img src="images/kk1.png">international</a></li><hr>
-				<li><a href="sp.html"><img src="images/sg1.png">Singapore</a></li><hr>
-				<li><a href="ประเทศไทย.html"><img src="images/th1.png">ประเทศไทย</a></li><hr>
-				<li><a href="vn.html"><img src="images/vn1.png">Việt Nam</a></li><hr>
-				<li><a href="pp.html"><img src="images/ph1.png">Philippines</a></li><hr>
-				<li><a href="대한민국.html"><img src="images/kr1.png">대한민국</a></li><hr>
-				<li><a href="hk.html"><img src="images/hk1.png">香港</a></li><hr>
-				<li><a href="in.html"><img src="images/id1.png">Indonesia</a></li><hr>
-				<li><a href="jp.html"><img src="images/jp1.png">日本</a></li><hr>
-				<li><a href="cn.html"><img src="images/cn1.png">中国</a></li><hr>
-				<li><a href="ms.html"><img src="images/my1.png">Malaysia</a></li><hr>-->
-				<li><a href="https://www.kkday.com/en"><img src="images/kk1.png">international</a></li><hr>
-				<li><a href="https://www.kkday.com/en-sg/"><img src="images/sg1.png">Singapore</a></li><hr>
-				<li><a href="https://www.kkday.com/th"><img src="images/th1.png">ประเทศไทย</a></li><hr>
-				<li><a href="https://www.kkday.com/vi"><img src="images/vn1.png">Việt Nam</a></li><hr>
-				<li><a href="https://www.kkday.com/en-ph/"><img src="images/ph1.png">Philippines</a></li><hr>
-				<li><a href="https://www.kkday.com/ko"><img src="images/kr1.png">대한민국</a></li><hr>
-				<li><a href="https://www.kkday.com/zh-hk/"><img src="images/hk1.png">香港</a></li><hr>
-				<li><a href="https://www.kkday.com/en-id/"><img src="images/id1.png">Indonesia</a></li><hr>
-				<li><a href="https://www.kkday.com/ja"><img src="images/jp1.png">日本</a></li><hr>
-				<li><a href="https://www.kkday.com/zh-cn/"><img src="images/cn1.png">中国</a></li><hr>
-				<li><a href="https://www.kkday.com/zh-my/"><img src="images/my1.png">Malaysia</a></li><hr>
+			<ol class="menu-slider-right" id="menu-slider-right0">
+				<li>
+					<i id="cross1" class="fa fa-times" style="font-size:24px;color:#555;"></i>
+				</li>
+				<hr>
+				<li>
+					<h3>現在選擇國家</h3>
+				</li>
+				<hr>
+				<li>
+					<a href="en.html">
+						<img src="images/tw1.png">台灣</a>
+				</li>
+				<hr>
+				<li>
+					<h3>所有國家</h3>
+				</li>
+				<hr>
+
+				<li>
+					<a href="https://www.kkday.com/en">
+						<img src="images/kk1.png">international</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/en-sg/">
+						<img src="images/sg1.png">Singapore</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/th">
+						<img src="images/th1.png">ประเทศไทย</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/vi">
+						<img src="images/vn1.png">Việt Nam</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/en-ph/">
+						<img src="images/ph1.png">Philippines</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/ko">
+						<img src="images/kr1.png">대한민국</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/zh-hk/">
+						<img src="images/hk1.png">香港</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/en-id/">
+						<img src="images/id1.png">Indonesia</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/ja">
+						<img src="images/jp1.png">日本</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/zh-cn/">
+						<img src="images/cn1.png">中国</a>
+				</li>
+				<hr>
+				<li>
+					<a href="https://www.kkday.com/zh-my/">
+						<img src="images/my1.png">Malaysia</a>
+				</li>
+				<hr>
 			</ol>
 		</div>
 	</div>
 
 
-	<div id="mwt_mwt_slider_scroll1">		 
+	<div id="mwt_mwt_slider_scroll1">
 		<div id="mwt_slider_content1">
-		    <ol class="menu-slider-right" id="menu-slider-right1">
-				<li><i id="cross2" class="fa fa-times" style="font-size:24px;color:#555;"></i></li><hr>
-				<li id="AUD">AUD 澳幣</li><hr>
-				<li id="CNY">CNY 人民幣</li><hr>
-				<li id="EUR">EUR 歐元</li><hr>
-				<li id="GBP">GBP 英鎊</li><hr>
-				<li id="HKD">HKD 港幣</li><hr>
-				<li id="IDR">IDR 印尼盾</li><hr>
-				<li id="JPY">JPY 日圓</li><hr>
-				<li id="KRW">KRW 韓圓</li><hr>
-				<li id="MYR">MYR 馬來西亞令吉</li><hr>
-				<li id="PHP">PHP 菲律賓比索</li><hr>
-				<li id="SGD">SGD 新加坡幣</li><hr>
-				<li id="THB">THB 泰銖</li><hr>
-				<li id="TWD">TWD 新臺幣</li><hr>
-				<li id="USD">USD 美元</li><hr>
-				<li id="VND">VND 越南盾</li><hr>
+			<ol class="menu-slider-right" id="menu-slider-right1">
+				<li>
+					<i id="cross2" class="fa fa-times" style="font-size:24px;color:#555;"></i>
+				</li>
+				<hr>
+				<li id="AUD">AUD 澳幣</li>
+				<hr>
+				<li id="CNY">CNY 人民幣</li>
+				<hr>
+				<li id="EUR">EUR 歐元</li>
+				<hr>
+				<li id="GBP">GBP 英鎊</li>
+				<hr>
+				<li id="HKD">HKD 港幣</li>
+				<hr>
+				<li id="IDR">IDR 印尼盾</li>
+				<hr>
+				<li id="JPY">JPY 日圓</li>
+				<hr>
+				<li id="KRW">KRW 韓圓</li>
+				<hr>
+				<li id="MYR">MYR 馬來西亞令吉</li>
+				<hr>
+				<li id="PHP">PHP 菲律賓比索</li>
+				<hr>
+				<li id="SGD">SGD 新加坡幣</li>
+				<hr>
+				<li id="THB">THB 泰銖</li>
+				<hr>
+				<li id="TWD">TWD 新臺幣</li>
+				<hr>
+				<li id="USD">USD 美元</li>
+				<hr>
+				<li id="VND">VND 越南盾</li>
+				<hr>
 			</ol>
 		</div>
 	</div>
 
-	
+
 
 	<section class="welcome">
-	<div class="container-fluid welcome-page text-center">
-		<div id="search_experience_app" class="row welcome-page-action fadeSlider">
-			<div class="img"></div>
-        	<div class="img"></div>
-        	<div class="img"></div>
-        </div>
-			<div class="kksearch"><h2>你要去哪裡？</h2> 		
-			<input type="text" id="search_experience_value" placeholder="輸入城市、景點、體驗行程或活動名稱..." class="form-control">
-			<div class="search_mark fa fa-search"></div>
+		<div class="container-fluid welcome-page text-center">
+			<div id="search_experience_app" class="row welcome-page-action fadeSlider">
+				<div class="img"></div>
+				<div class="img"></div>
+				<div class="img"></div>
 			</div>
-		
-	</div>
+			<div class="kksearch">
+				<h2>你要去哪裡？</h2>
+				<input type="text" id="search_experience_value" placeholder="輸入城市、景點、體驗行程或活動名稱..." class="form-control">
+				<div class="search_mark fa fa-search"></div>
+			</div>
+
+		</div>
 	</section>
 
 	<div id="recommandCityApp" style=" clear: both;">
@@ -184,8 +283,12 @@
 						<h4 class="sub-title">探索更多熱門目的地</h4>
 						<div class="recommand-col">
 							<div class="col-4">
-								<h3>大阪</h3>
-								<h4>149旅遊體驗</h4>
+								<a href="journeySelect.html" class="link-second" target="blank">
+									<div class="link-second-container">
+										<h3>大阪</h3>
+										<h4>149旅遊體驗</h4>
+									</div>
+								</a>
 							</div>
 							<div class="col-4">
 								<h3>京都</h3>
@@ -222,529 +325,751 @@
 		</section>
 	</div>
 
-	<section class="home-section full-width koreaBig">
-		<div class="container korea fixed-width">
-			<h2 class="title">韓國滑雪祭</h2>
-			<div class="col-4">
-				<img src="https://farm3.static.flickr.com/2312/2101133246_9abba9da51_c.jpg" alt="">
-				<h4>【韓國超值新手滑雪】洪川大明維爾瓦第滑雪村一日遊</h4>
-				<div class="orderIcon fa fa-firefox"></div>
-				<h5 class="orders">4K+已訂購</h5>
-				<div class="orderIcon2 fa fa-map-marker"></div>
-				<h5>韓國 首爾,多個城市</h5>
-				<div>
-					<div class="starContainer">
-						<div class="fa fa-star"></div>
-						<div class="fa fa-star"></div>
-						<div class="fa fa-star"></div>
-						<div class="fa fa-star"></div>
-						<div class="fa fa-star"></div>
-					</div>
-					<div class="j_rating-no"><h5>(484)</h5></div>
-					<div class="j_currency">TWD</div>
-						<div class="j_price">937</div><div class="j_price-hd" style ="display:none">937</div>				
-				</div>
-			</div>	
-
-			<div class="col-4">
-				<img src="https://farm6.static.flickr.com/5284/5354686357_c687f806b1_c.jpg" alt="">
-				<h4>【入門/進階教學全都包】韓國橡樹谷OakValley滑雪場一日遊</h4>
-				<div class="orderIcon fa fa-firefox"></div>
-				<h5>933已訂購</h5>
-				<div class="orderIcon2 fa fa-map-marker"></div>
-				<h5>韓國 江原道,多個城市</h5>
-				<div class="starContainer">
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-				</div>
-				<div class="j_rating-no"><h5>(168)</h5></div>
-				<div class="j_currency" name="j_currency" >TWD</div>
-					<div class="j_price">807</div><div class="j_price-hd" style ="display:none">807</div>
-				
-			</div>
-			<div class="col-4">
-				<img src="https://farm3.static.flickr.com/2036/2100364237_af00f593c2_c.jpg" alt="">
-				<h4>【韓國歐巴教你滑雪】江原道伊利希安江村滑雪一日遊</h4>
-				<div class="orderIcon fa fa-firefox"></div>
-				<h5>437已訂購</h5>
-				<div class="orderIcon2 fa fa-map-marker"></div>
-				<h5>韓國 首爾,多個城市</h5>
-				<div class="starContainer clearfix">
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-				</div>
-				<div class="j_rating-no"><h5>(143)</h5></div>
-				<div class="j_currency">TWD</div>
-					<div class="j_price">834</div><div class="j_price-hd" style ="display:none">834</div>
-				
-			</div>
-			<div class="col-4">
-				<img src="https://farm5.static.flickr.com/4638/27365051949_1d82c0096e_c.jpg" alt="">
-				<h4>【韓國滑雪入門】伊利西安滑雪場，最適合新手的基礎滑雪團</h4>
-				<div class="orderIcon fa fa-firefox"></div>
-				<h5>751已訂購</h5>
-				<div class="orderIcon2 fa fa-map-marker"></div>
-				<h5>韓國 首爾,多個城市</h5>
-				<div class="starContainer">
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star"></div>
-					<div class="fa fa-star grey"></div>
-				</div>
-				<div class="j_rating-no"><h5>(115)</h5></div>
-				<div class="j_currency">TWD</div>
-					<div class="j_price">973</div><div class="j_price-hd" style ="display:none">973</div>
-				
-			</div>
-		</div>
-	</section>
-
-	<section class="j_home-section">
-			<div class="j_container">
-				<h2 class="j_title">日本賞雪趣</h2>
-			</div>													
-				<div class="j_section-head j_clearfix">				
-					<div id="j_jp1" class="j_fixed-width j_col-4">
-						<div class="j_pix">
-							<!--<img src="images/101.jpg">-->
-						</div>
-						<div class="j_description j_clearfix">
-							<h3>【大阪滑雪巴士】琵琶湖Valley・箱館山滑雪一日遊</h3><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>892個已訂購</h5></div>
-							<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>日本, 大阪, 京都, 滋賀</h5>
-						</div>
-						<div class="j_star">
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						</div>
-						<div class="j_rating-no"><h5>(85)</h5></div>
-						<div class="j_currency">TWD</div><div class="j_price"  name="j-price"> 1980</div><div class="j_price-hd" style ="display:none">1980</div>
-					</div>
-																		
-					<div id="j_jp2" class="j_fixed-width j_col-4">	
-						<div class="j_pix">
-							<!--<img src="images/201.jpg">-->
-						</div>
-						<div class="j_description j_clearfix">
-							<h3>【東京滑雪採草莓】群馬玉原雪場一日遊（新宿出發）</h3>
-							<br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>181個已訂購</h5></div>
-							<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-							<h5>日本, 群馬, 東京</h5>
-						</div>
-						<div class="j_star">
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						</div><div class="j_rating-no"><h5>(22)</h5></div>
-						<div class="j_currency">TWD</div><div class="j_price" >2614</div><div class="j_price-hd" style ="display:none">2614</div>
-					</div>
-
-							
-					<div id="j_jp3" class="j_fixed-width j_col-4">	
-						<div class="j_pix">
-							<!--<img src="images/301.jpg">-->
-						</div>
-						<div class="j_description j_clearfix">
-							<h4>【苗場／輕井澤滑雪】熊貓兒童滑雪教室課程</h4><br>
-							<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>11個已訂購</h5></div>
-							<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-							<h5>日本, 札幌, 北海道</h5>
-						</div>
-						<div class="j_star">
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						</div><div class="j_rating-no"><h5>(11)</h5></div>
-						<div class="j_currency">TWD</div><div class="j_price" >2614</div><div class="j_price-hd" style ="display:none">2614</div>
-					</div>	
-
-							
-					<div id="j_jp4" class="j_fixed-width j_col-4">	
-						<div class="j_pix">
-							<!--<img src="images/2401.png">-->
-						</div>
-						<div class="j_description j_clearfix">
-							<h4>【滑雪體驗一日遊】初學者限定・札幌國際滑雪場一日滑雪體驗</h4><br>
-							<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5></h5></div>
-							<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-							<h5>日本, 東京, 長野</h5>
-						</div>
-						<div class="j_star">
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-							<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						</div><div class="j_rating-no"><h5>(1)</h5></div>
-						<div class="j_currency">TWD</div><div class="j_price" >2231</div><div class="j_price-hd" style ="display:none">2231</div>
-					</div>	
-
-				</div>
-	</section>
-	<div  class="clearfix"></div>
 	<section class="j_home-section  clearfix">
-			<div class="j_container">
-				<h2 class="j_title">環遊世界瘋樂園</h2>
+		<div class="j_container">
+			<h2 class="j_title">韓國滑雪祭</h2>
+		</div>
+		<div class="j_section-head j_clearfix">
+			<div id="j_kr1" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【韓國超值新手滑雪】洪川大明維爾瓦第滑雪村一日遊</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>4K+已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國 首爾,多個城市</h5>
+				</div>
+
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(484)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price" name="j-price">937</div>
+				<div class="j_price-hd" style="display:none">937</div>
 			</div>
-			<div class="j_section-head j_clearfix">				
-				<div id="j_garden1" class="j_fixed-width j_col-4">
-					<div class="j_pix">
-						<!--<img src="images/101.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【USS環球影城門票】新加坡環球影城門票一日券</h3><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>6.1K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>新加坡, 新加坡</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(707)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1508</div><div class="j_price-hd" style ="display:none">1508</div>
+
+
+			<div id="j_kr2" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
 				</div>
-																	
-				<div id="j_garden2" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/201.jpg">-->
+				<div class="j_description j_clearfix">
+					<h4>【入門/進階教學全都包】韓國橡樹谷OakValley滑雪場一日遊</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>933已訂購</h5>
 					</div>
-					<div class="j_description j_clearfix">
-						<h3>【上海旅遊新景點】上海迪士尼樂園門票</h3>
-						<br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>4.8K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>中國, 上海</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(429)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1549</div><div class="j_price-hd" style ="display:none">1549</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國 江原道,多個城市</h5>
 				</div>
 
-						
-				<div id="j_garden3" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/301.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【官方授權】日本環球影城™門票＋新版快速®通關</h3><br>
-						<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>866個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>日本, 大阪</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(51)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >3489</div><div class="j_price-hd" style ="display:none">3489</div>
-				</div>	
-
-						
-				<div id="j_garden4" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/401.png">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【保證入園】東京迪士尼門票一日券（電子票券）</h3>
-						<br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>35.8K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>日本, 東京, 千葉</h5>
-					</div>
-					
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(2979)</h5></div>
-					<div class="j_currency">TWD </div><div class="j_price" >1940</div><div class="j_price-hd" style ="display:none">1940</div>					
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
 				</div>
-			</div>	
-		</section>
+				<div class="j_rating-no">
+					<h5>(168)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price" name="j-price">807</div>
+				<div class="j_price-hd" style="display:none">807</div>
 
-		<div class="clearfix"></div>
-
-		<section class="j_home-section  clearfix">
-			<div class="j_container">
-				<h2 class="j_title"></h2>
 			</div>
-			<div class="j_section-head j_clearfix">	
-				<div id="j_garden5" class="j_fixed-width j_col-4">
-					<div class="j_pix">
-						<!--<img src="images/101.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【Disneyland】加州迪士尼樂園優惠一日券</h3><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>2.5K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>美國, 洛杉磯</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(204)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >2604</div><div class="j_price-hd" style ="display:none">2604</div>
+
+			<div id="j_kr3" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
 				</div>
-																	
-				<div id="j_garden6" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/201.jpg">-->
+				<div class="j_description j_clearfix">
+					<h4>【韓國歐巴教你滑雪】江原道伊利希安江村滑雪一日遊</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>437已訂購</h5>
 					</div>
-					<div class="j_description j_clearfix">
-						<h3>【官方授權】加州環球影城快速通關＋門票一日券</h3>
-						<br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>1.6K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>美國, 洛杉磯</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(96)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >5206</div><div class="j_price-hd" style ="display:none">5206</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國 首爾,多個城市</h5>
 				</div>
 
-						
-				<div id="j_garden7" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/301.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【官方授權】韓國愛寶樂園門票＋快速通關 Q-pass</h3><br>
-						<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>1.3K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>韓國, 京畿道, 首爾</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(138)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1213</div><div class="j_price-hd" style ="display:none">1213</div>
-				</div>	
-
-						
-				<div id="j_garden8" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/401.png">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h3>【首爾必去樂園】韓國樂天世界門票＋快速通關 Magic Pass</h3>
-						<br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>4.8K+個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>韓國, 首爾</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(469)</h5></div>
-					<div class="j_currency">TWD </div><div class="j_price" >865</div><div class="j_price-hd" style ="display:none">865</div>					
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
 				</div>
+				<div class="j_rating-no">
+					<h5>((143)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price" name="j-price">834</div>
+				<div class="j_price-hd" style="display:none">834</div>
+			</div>
+			<div id="j_kr4" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【韓國滑雪入門】伊利西安滑雪場，最適合新手的基礎滑雪團</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>751已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國 首爾,多個城市</h5>
+				</div>
+
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(115)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price" name="j-price">973</div>
+				<div class="j_price-hd" style="display:none">973</div>
+			</div>
+		</div>
+	</section>
+	<div class="clearfix"></div>
+	<section class="j_home-section">
+		<div class="j_container">
+			<h2 class="j_title">日本賞雪趣</h2>
+		</div>
+		<div class="j_section-head j_clearfix">
+			<div id="j_jp1" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【大阪滑雪巴士】琵琶湖Valley・箱館山滑雪一日遊</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>892個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 大阪, 京都, 滋賀</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(85)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price" name="j-price"> 1980</div>
+				<div class="j_price-hd" style="display:none">1980</div>
+			</div>
+
+			<div id="j_jp2" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/201.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【東京滑雪採草莓】群馬玉原雪場一日遊（新宿出發）</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>181個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 群馬, 東京</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(22)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2614</div>
+				<div class="j_price-hd" style="display:none">2614</div>
+			</div>
+
+
+			<div id="j_jp3" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/301.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【苗場／輕井澤滑雪】熊貓兒童滑雪教室課程</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>11個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 札幌, 北海道</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(11)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2614</div>
+				<div class="j_price-hd" style="display:none">2614</div>
+			</div>
+
+
+			<div id="j_jp4" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/2401.png">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【滑雪體驗一日遊】初學者限定・札幌國際滑雪場一日滑雪體驗</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5></h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 東京, 長野</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(1)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2231</div>
+				<div class="j_price-hd" style="display:none">2231</div>
+			</div>
+
+		</div>
+	</section>
+	<div class="clearfix"></div>
+	<section class="j_home-section  clearfix">
+		<div class="j_container">
+			<h2 class="j_title">環遊世界瘋樂園</h2>
+		</div>
+		<div class="j_section-head j_clearfix">
+			<div id="j_garden1" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【USS環球影城門票】新加坡環球影城門票一日券</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>6.1K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>新加坡, 新加坡</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(707)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1508</div>
+				<div class="j_price-hd" style="display:none">1508</div>
+			</div>
+
+			<div id="j_garden2" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/201.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【上海旅遊新景點】上海迪士尼樂園門票</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>4.8K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>中國, 上海</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(429)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1549</div>
+				<div class="j_price-hd" style="display:none">1549</div>
+			</div>
+
+
+			<div id="j_garden3" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/301.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【官方授權】日本環球影城™門票＋新版快速®通關</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>866個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 大阪</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(51)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">3489</div>
+				<div class="j_price-hd" style="display:none">3489</div>
+			</div>
+
+
+			<div id="j_garden4" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/401.png">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【保證入園】東京迪士尼門票一日券（電子票券）</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>35.8K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>日本, 東京, 千葉</h5>
+				</div>
+
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(2979)</h5>
+				</div>
+				<div class="j_currency">TWD </div>
+				<div class="j_price">1940</div>
+				<div class="j_price-hd" style="display:none">1940</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="j_europe" class="j_home-section  clearfix" >
-			<div class="j_container">
-				<h2 class="j_title">歐洲壯麗冒險</h2>
+	<div class="clearfix"></div>
+
+	<section class="j_home-section  clearfix">
+		<div class="j_container">
+			<h2 class="j_title"></h2>
+		</div>
+		<div class="j_section-head j_clearfix">
+			<div id="j_garden5" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【Disneyland】加州迪士尼樂園優惠一日券</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>2.5K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>美國, 洛杉磯</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(204)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2604</div>
+				<div class="j_price-hd" style="display:none">2604</div>
 			</div>
 
-			<div class="j_section-head j_clearfix">							
-				<div id="j_europe1" class="j_fixed-width j_col-4"> 
-					<div class="j_pix">
-						<!--<img src="images/101.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【冰島夢幻藍色潟湖】冰島藍湖溫泉門票及巴士接駁</h4><br><br>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>冰島, 雷克雅維克</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(6)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >3428</div><div class="j_price-hd" style ="display:none">3428</div>
+			<div id="j_garden6" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/201.jpg">-->
 				</div>
-																	
-				<div id="j_europe2" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/201.jpg">-->
+				<div class="j_description j_clearfix">
+					<h4>【官方授權】加州環球影城快速通關＋門票一日券</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>1.6K+個已訂購</h5>
 					</div>
-					<div class="j_description j_clearfix">
-						<h4>【前進冰島黃金圈】雷克雅維克黃金圈一日遊（中文導覽）</h4>
-						<br><br>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>冰島, 雷克雅維克</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(2)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >2694</div><div class="j_price-hd" style ="display:none">2694</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>美國, 洛杉磯</h5>
 				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(96)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">5206</div>
+				<div class="j_price-hd" style="display:none">5206</div>
+			</div>
 
-						
-				<div id="j_europe3" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/301.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【極地火山探險】冰島熔岩洞探索體驗</h4>
-						<br><br>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>冰島, 雷克雅維克</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(8)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >2808</div><div class="j_price-hd" style ="display:none">2808</div>
-				</div>	
 
-						
-				<div id="j_europe4" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/401.png">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【乘船追尋北極光】挪威特羅姆瑟極光船晚宴</h4>
-						<br><br>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>挪威, 特羅姆瑟</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>()</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >5329</div><div class="j_price-hd" style ="display:none">5329</div>					
+			<div id="j_garden7" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/301.jpg">-->
 				</div>
-			</div>						
+				<div class="j_description j_clearfix">
+					<h4>【官方授權】韓國愛寶樂園門票＋快速通關 Q-pass</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>1.3K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國, 京畿道, 首爾</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(138)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1213</div>
+				<div class="j_price-hd" style="display:none">1213</div>
+			</div>
+
+
+			<div id="j_garden8" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/401.png">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【首爾必去樂園】韓國樂天世界門票＋快速通關 Magic Pass</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>4.8K+個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國, 首爾</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(469)</h5>
+				</div>
+				<div class="j_currency">TWD </div>
+				<div class="j_price">865</div>
+				<div class="j_price-hd" style="display:none">865</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section id="j_europe" class="j_home-section  clearfix">
+		<div class="j_container">
+			<h2 class="j_title">歐洲壯麗冒險</h2>
+		</div>
+
+		<div class="j_section-head j_clearfix">
+			<div id="j_europe1" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【冰島夢幻藍色潟湖】冰島藍湖溫泉門票及巴士接駁</h4>
+					<br>
+					<br>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>冰島, 雷克雅維克</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(6)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">3428</div>
+				<div class="j_price-hd" style="display:none">3428</div>
+			</div>
+
+			<div id="j_europe2" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/201.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【前進冰島黃金圈】雷克雅維克黃金圈一日遊（中文導覽）</h4>
+					<br>
+					<br>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>冰島, 雷克雅維克</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(2)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2694</div>
+				<div class="j_price-hd" style="display:none">2694</div>
+			</div>
+
+
+			<div id="j_europe3" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/301.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【極地火山探險】冰島熔岩洞探索體驗</h4>
+					<br>
+					<br>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>冰島, 雷克雅維克</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(8)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2808</div>
+				<div class="j_price-hd" style="display:none">2808</div>
+			</div>
+
+
+			<div id="j_europe4" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/401.png">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【乘船追尋北極光】挪威特羅姆瑟極光船晚宴</h4>
+					<br>
+					<br>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>挪威, 特羅姆瑟</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>()</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">5329</div>
+				<div class="j_price-hd" style="display:none">5329</div>
+			</div>
+		</div>
 	</section>
 
 	<div class="clearfix"></div>
 
 	<section id="j_spa" class="j_home-section clearfix">
-			<div class="j_container">				
-				<h2 class="j_title">能量重啟紓壓SPA</h2>
+		<div class="j_container">
+			<h2 class="j_title">能量重啟紓壓SPA</h2>
+		</div>
+		<div class="j_section-head j_clearfix">
+			<div id="j_spa1" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/101.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【全程紅蔘保養】首爾江南正官庄SPA體驗（平日）</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>185個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>韓國, 首爾</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(18)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">2933</div>
+				<div class="j_price-hd" style="display:none">2933</div>
 			</div>
-			<div class="j_section-head j_clearfix">						
-				<div id="j_spa1" class="j_fixed-width j_col-4"> 
-					<div class="j_pix">
-						<!--<img src="images/101.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【全程紅蔘保養】首爾江南正官庄SPA體驗（平日）</h4><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>185個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i><h5>韓國, 首爾</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(18)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >2933</div><div class="j_price-hd" style ="display:none">2933</div>
-				</div>
-																	
-				<div id="j_spa2" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/201.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【清邁按摩推薦】Fah Lanna Spa 泰式古法（附旅館接送）</h4><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>373個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>泰國, 清邁</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(89)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1211</div><div class="j_price-hd" style ="display:none">1211</div>
-				</div>
 
-						
-				<div id="j_spa3" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/301.jpg">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【體驗貴婦按摩】曼谷 Divana Virtue Spa Silom  95 折優惠</h4><br><i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i><div class="j_order-no"><h5>206個已訂購</h5></div>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5>泰國, 曼谷</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(48)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1099</div><div class="j_price-hd" style ="display:none">1099</div>
-				</div>	
-
-						
-				<div id="j_spa4" class="j_fixed-width j_col-4">	
-					<div class="j_pix">
-						<!--<img src="images/401.png">-->
-					</div>
-					<div class="j_description j_clearfix">
-						<h4>【亞洲最佳SPA】長灘島Mandala Spa菲律賓傳統按摩</h4><br><br>
-						<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
-						<h5> 菲律賓, 長灘島</h5>
-					</div>
-					<div class="j_star">
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-						<i class="fa fa-star" style="color:#42dcf4;" ></i>
-					</div><div class="j_rating-no"><h5>(7)</h5></div>
-					<div class="j_currency">TWD</div><div class="j_price" >1858</div><div class="j_price-hd" style ="display:none">1858</div>					
+			<div id="j_spa2" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/201.jpg">-->
 				</div>
-			</div>			
-			
+				<div class="j_description j_clearfix">
+					<h4>【清邁按摩推薦】Fah Lanna Spa 泰式古法（附旅館接送）</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>373個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>泰國, 清邁</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(89)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1211</div>
+				<div class="j_price-hd" style="display:none">1211</div>
+			</div>
+
+
+			<div id="j_spa3" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/301.jpg">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【體驗貴婦按摩】曼谷 Divana Virtue Spa Silom 95 折優惠</h4>
+					<br>
+					<i class="fa fa-fire" style="font-size:14px;color:gray; float:left"></i>
+					<div class="j_order-no">
+						<h5>206個已訂購</h5>
+					</div>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5>泰國, 曼谷</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(48)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1099</div>
+				<div class="j_price-hd" style="display:none">1099</div>
+			</div>
+
+
+			<div id="j_spa4" class="j_fixed-width j_col-4">
+				<div class="j_pix">
+					<!--<img src="images/401.png">-->
+				</div>
+				<div class="j_description j_clearfix">
+					<h4>【亞洲最佳SPA】長灘島Mandala Spa菲律賓傳統按摩</h4>
+					<br>
+					<br>
+					<i class="fa fa-map-marker" style="font-size:14px;color:gray; float:left"></i>
+					<h5> 菲律賓, 長灘島</h5>
+				</div>
+				<div class="j_star">
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+					<i class="fa fa-star" style="color:#42dcf4;"></i>
+				</div>
+				<div class="j_rating-no">
+					<h5>(7)</h5>
+				</div>
+				<div class="j_currency">TWD</div>
+				<div class="j_price">1858</div>
+				<div class="j_price-hd" style="display:none">1858</div>
+			</div>
+		</div>
+
 	</section>
 
 	<section class="why-kkday full-width">
@@ -874,5 +1199,5 @@
 	</footer>
 
 </body>
-</html>
 
+</html>

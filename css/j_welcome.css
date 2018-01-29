@@ -1,35 +1,40 @@
-.welcome-page 
-{
+.welcome-page {
   position: relative;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
-
-.welcome-page .fadeSlider .img 
-{
+.welcome-page .fadeSlider .img {
   width: 100%;
   height: 550px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; 
- 
+  background-position: center;
 }
 
-.welcome-page .fadeSlider .img:nth-of-type(1) 
-{
-  background-image: url("../images/kkday1.jpg"); 
+.welcome-page .fadeSlider .img:nth-of-type(1) {
+  background-image: url("../images/kkday1.jpg");
 }
-.welcome-page .fadeSlider .img:nth-of-type(2) 
-{
-  background-image: url("../images/kkday2.jpg"); 
+.welcome-page .fadeSlider .img:nth-of-type(2) {
+  background-image: url("../images/kkday2.jpg");
 }
-.welcome-page .fadeSlider .img:nth-of-type(3) 
-{
-  background-image: url("../images/kkday3.jpg"); 
+.welcome-page .fadeSlider .img:nth-of-type(3) {
+  background-image: url("../images/kkday3.jpg");
 }
-  
+@media screen and (min-width: 991px){
 .welcome-page .kksearch {
-     
+  position: absolute;
+  left: 250px;
+  bottom: 20px;
+}
+}
+@media screen and (min-width: 760px) and (max-width: 990px) {
+  .welcome-page .kksearch {
     position: absolute;
-    left: 250px;
     bottom: 20px;
-     }
+  }
+}
+@media screen and (max-width: 759px){
+  .welcome-page .kksearch {
+    position: absolute;
+    bottom: 20px;
+  }
+}

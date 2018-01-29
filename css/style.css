@@ -1,10 +1,10 @@
 @media screen and (min-width: 990px) {
   * {
     font-family: microsoft jhenghei;
+    font-weight: bold;
   }
   body,
   html {
-    height: 2000px;
     background-color: #f5f5f5 !important;
   }
   body,
@@ -21,7 +21,9 @@
     margin: 0;
     padding: 0;
   }
-  ul,li,a{
+  ul,
+  li,
+  a {
     text-decoration: none;
     color: black;
     list-style-type: none;
@@ -32,8 +34,8 @@
   .full-width-90 {
     width: 95%;
   }
-  .full-width-75{
-    width: 75%;
+  .full-width-75 {
+    width: 80%;
   }
   .fixed-width {
     width: 1140px;
@@ -50,7 +52,7 @@
     display: block;
     clear: both;
   }
-  .col-3{
+  .col-3 {
     width: calc(100% / 3);
     float: left;
     margin: 0px;
@@ -59,61 +61,93 @@
     width: calc(100% / 4 - 20px);
     float: left;
     margin: 0 10px;
+    max-width: 21.3%!important;
+  }
+  .gotop{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(117, 117, 117, 0.5);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .gotop:hover{
+    background-color: rgba(117, 117, 117, 0.6);
+  }
+  .pick-condition{
+    display: none;
+  }
+  .gotop-trangle{
+    position: relative;
+    bottom: -16px;
+    right: -14px;
+    width: 13px;
+    height: 13px;
+    border-top: solid 3px #fff;
+    border-left: solid 3px #fff;
+    transform: rotate(45deg);
+  }
+  .pick-confirm{
+    display: none;
   }
   .welcome-page-action {
-  
-}
-.welcome-page {
-  width: 100%;
-  position: relative;
-}
-.kksearch {
-  width: 60%;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background-color: #effeff;
-  height: 133.8px;
-  color: #138184; 
-  position: absolute;
-  left: 250px;
-  bottom: 20px;
-}
+
+  }
+  .welcome-page {
+    width: 100%;
+    position: relative;
+    
+  }
+  .kksearch {
+    width: 60%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #effeff;
+    height: 133.8px;
+    color: #138184;
+    position: absolute;
+    left: 250px;
+    bottom: 20px;
+
+  }
   .kksearch h2 {
     font-size: 1.7em;
-    margin: 15px 0;
-    margin-left: 20px; 
+    margin: 20px 0;
+    margin-left: 35px;
   }
   #search_experience_value {
     width: 90.5%;
     border: 0.5px solid rgb(214, 214, 214);
     height: 48px;
     margin: auto;
-    margin-left: 20px;
     float: left;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    padding-left: 10px;
   }
   .search_mark {
-    width: 48px;
-    height: 48px;
+    width: 51px;
+    height: 51px;
     background-color: #22abb5;
-    line-height: 48px;
+    line-height: 51px!important;
     text-align: center;
     color: #fdfefe;
     font-size: 24px;
-    margin: auto;
     position: absolute;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    
     float: right;
-    right: 40px;
+    position: absolute;
+    right: 50px;
   }
-  #search_experience_value::-webkit-input-placeholder {
+  #search_experience_value {
+    padding-left: 10px;
+  }
+   ::-webkit-input-placeholder {
     /* WebKit browsers */
     color: rgb(182, 182, 182);
-    font-weight: bold;
     font-size: 1.1em;
   }
   #thedate::-webkit-input-placeholder {
@@ -125,14 +159,12 @@
   .recommand-city .title,
   .korea .title {
     font-size: 1.6em;
-    font-weight: bold;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-top: 50px;
   }
   .recommand-city .sub-title {
     font-size: 16px;
-    font-weight: bold;
     margin-left: 5px;
     color: #555;
   }
@@ -142,6 +174,10 @@
     border-radius: 5px;
     position: relative;
     cursor: pointer;
+  }
+  .link-second-container{
+    width: 100%;
+    height: 100%;
   }
   .recommand-city .col-4::after {
     content: "";
@@ -169,7 +205,6 @@
   }
   .recommand-city h3 {
     color: #fff;
-    font-weight: bold;
     font-size: 1.3em;
     padding-left: 10px;
     position: absolute;
@@ -338,7 +373,6 @@
     background-color: #f5d313;
     color: #fff;
     border: none;
-    font-weight: bold;
     /* box-shadow: 1px 1px 20px 1px #555; */
     border-radius: 5px;
     position: absolute;
@@ -358,14 +392,13 @@
     height: 113px;
     font-size: 1.2em;
     color: #666;
-    font-weight: bold;
     margin-top: 70px;
     position: absolute;
     top: 20%;
     right: 30%;
   }
   .bluebg {
-    margin-top: 60px;
+    margin-top: 0;
     width: 100%;
     position: relative;
     display: flex;
@@ -375,9 +408,19 @@
     background-position: center right;
     background-repeat: no-repeat;
   }
+  .filter-all {
+    box-sizing: border-box;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 100px;
+    position: relative;
+    top: -150px;
+  }
   .jpcityContainer {
     position: relative;
+    left: 20px;
     top: -160px;
+    margin: auto;
   }
   .pagetitle {
     height: 200px;
@@ -395,7 +438,6 @@
   .allCityTitle,
   .allCityIcon {
     color: #fff;
-    font-weight: bold;
   }
   .japanTitle {
     margin: 0 20px;
@@ -405,6 +447,30 @@
     font-size: 1.9em;
     margin: 0 20px 20px 20px;
   }
+  .allCity .dropdown{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5%;
+    overflow-y: auto;
+    height: 290px;
+  }
+  .allCity .dropdown a{
+    color: #333;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+    font-size: 0.9em;
+    border-radius: 5%;
+    z-index: 1;
+  }
   .allCityCon {
     cursor: pointer;
   }
@@ -412,23 +478,8 @@
     font-size: 1.5em;
     float: left;
     line-height: 40px;
-    font-weight: bold;
     margin-left: 5px;
     margin: auto;
-  }
-  #dropdown-menu {
-    position: relative;
-    top: -35px;
-    margin: 20px;
-    height: 290px;
-    overflow-y: auto;
-    width: 180px;
-    transition: all 0.3s;
-    display: none;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px 3px #00000063;
-    background-color: #f5f5f5;
   }
   .allCity li {
     margin-top: 15px;
@@ -438,18 +489,29 @@
     color: #000;
     font-weight: 650;
   }
+  .sideMenu-group {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 25%;
+  }
   .slctDate,
   .allMerchant,
   .slctRange,
   .timeStamp,
-  .guideLan {
-    width: 270px;
+  .guideLan{
+    width: 100%;
     border: 1px solid transparent;
     border-radius: 7px;
     background-color: #fff;
     position: relative;
     left: 14.5%;
     padding: 10px;
+    margin-bottom: 10px;
+  }
+  .pick-title{
+    display: none;
   }
   .slctDate {
     height: 100px;
@@ -474,20 +536,43 @@
     border-radius: 4px;
     padding-left: 10px;
     font-family: "microsoft jhenghei";
-    font-weight: bold;
     color: rgb(97, 97, 97);
     font-size: 14px;
     background-color: #fafafa;
   }
   .allMerchant {
-    top: -7%;
     height: 285px;
-    overflow: hidden;
     cursor: pointer;
   }
   .allMerchant h3 {
     margin-bottom: 10px;
     margin-left: 15px;
+  }
+  .allMerchant .dropdown-content{
+    display: none;
+    position: relative;
+    top: -45px;
+    left: 283px;
+    background-color: #EFF9FA;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 200px;
+    /* padding: 10px; */
+    border-radius: 5%;
+    transition: all 0s;
+    height: auto;
+  }
+  .allMerchant .dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 0.8em;
+    font-weight: normal;
+    border-radius: 5%;
+    background-color: #EFF9FA;
+  }
+  .open{
+    display: block;
   }
   .aIconCon {
     width: 100%;
@@ -502,7 +587,6 @@
   }
   .aIconCon a {
     font-size: 14px;
-    font-weight: bold;
     color: #333;
     padding-left: 15px;
   }
@@ -510,23 +594,8 @@
     color: #333;
     text-decoration: none;
   }
-  .aIconCon a:hover .allMerchant .merchantList {
-    display: block;
-    z-index: 99;
-  }
   .aIconCon a:hover .slctDate {
     font-size: 5em;
-  }
-  .merchantList {
-    float: right;
-    width: 100%;
-    height: 50px;
-    z-index: 99;
-    display: none;
-    background-color: #f00;
-  }
-  .aIconCon a:nth-of-type(1) {
-    margin-top: 10px;
   }
   .merchantIcon {
     float: right;
@@ -535,7 +604,6 @@
   }
   .allMerchantList li {
     font-family: microsoft jhenghei;
-    font-weight: bold;
     font-size: 0.9em;
     height: 53px;
     background-color: #eff9fa;
@@ -545,7 +613,6 @@
   }
   .slctRange {
     height: 150px;
-    margin-top: -130px;
     padding: 15px;
   }
   .slctRange p {
@@ -558,8 +625,8 @@
   .ui-slider .ui-slider-handle {
     border-radius: 50%;
   }
-  .timeStamp, .guideLan {
-    margin-top: 10px;
+  .timeStamp,
+  .guideLan {
     position: relative;
     padding: 15px;
   }
@@ -567,69 +634,72 @@
     margin: 0;
     padding-left: 50px;
   }
-  .timeStamp .trangle, .guideLan .trangle {
+  .timeStamp .trangle,
+  .guideLan .trangle {
     position: absolute;
     top: 10px;
     right: 20px;
     cursor: pointer;
     color: #666666;
     transition: all 0.1s;
-    }
-    .timeStamp .trangle:active,
-    .guideLan .trangle:active{
-      transform: rotate(180deg);
-    }
-    .timeStamp .trangle:hover,
-    .guideLan .trangle:hover{
-      color: black;
-    }
-  .timeStamp .checkbox, .guideLan .checkbox {
+  }
+  .timeStamp .trangle:active,
+  .guideLan .trangle:active {
+    transform: rotate(180deg);
+  }
+  .timeStamp .trangle:hover,
+  .guideLan .trangle:hover {
+    color: black;
+  }
+  .timeStamp .checkbox,
+  .guideLan .checkbox {
     display: block;
     margin-top: 15px;
     margin-left: 5px;
     color: #666;
     font-size: 0.9em;
-    font-weight: bold;
   }
-  .timeStamp span, .guideLan span {
+  .timeStamp span,
+  .guideLan span {
     margin-left: 15px;
   }
-  .checkbox i, .guideLan i{
+  .checkbox i,
+  .guideLan i {
     font-size: 1.2em;
   }
-  .timeStamp .checkbox:hover, .guideLan .checkbox:hover{
+  .timeStamp .checkbox:hover,
+  .guideLan .checkbox:hover {
     cursor: pointer;
   }
   .timeStamp .checkbox:hover i,
-  .guideLan .checkbox:hover i{
+  .guideLan .checkbox:hover i {
     color: #5FB7E7;
   }
-  .fa-check-square{
+  .fa-check-square {
     color: #5FB7E7;
     font-size: 1.2em;
   }
-  footer{
+  footer {
     background-color: #444;
   }
-  .row{
-    margin: auto;
+  .row {
+    margin: auto!important;
   }
-  .row .col-4{
-    margin-bottom: 70px;
+  .row .col-4 {
+    margin-bottom: 50px;
   }
-  .row h4{
+  .row h4 {
     color: #8D8D8D;
     margin: 50px 0 20px 0;
     font-size: 1.1em;
   }
-  .row a{
+  .row a {
     text-align: center;
     color: #fff;
-    font-weight: bold;
     font-size: 0.9em;
     line-height: 20px;
   }
-  .footerIcon{
+  .footerIcon {
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -638,34 +708,226 @@
     font-size: 1.3em;
     text-align: center;
     line-height: 35px;
+    margin-right: 7px;
+    margin-bottom: 7px;
   }
-  .copyright{
+  .copyright {
     margin-top: 20px;
     text-align: right;
     color: #aaa;
     font-family: 'calibri';
-    font-weight: bold;
     font-size: 0.9em;
   }
-  hr{
+  hr {
     width: 100%;
     color: #555;
     border: 0.5px solid #555;
   }
-  .twfooter{
+  .twfooter {
     margin-top: 20px;
     background-color: #333;
     height: 150px;
     width: 100%;
   }
-  .twfooter .info{
+  .twfooter .info {
     margin-top: 20px;
     font-size: 0.7em;
-    font-weight: bold;
     line-height: 20px;
   }
-  .info li{
+  .info li {
     color: #999;
   }
-  
+  .content-group {
+    margin-left: 20px;
+  }
+  .product-title, .sorting, .product-listview{
+    width: 70%;
+    background-color: #fff;
+    float: right;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .product-title h4 {
+    font-size: 1em;
+  }
+  .product-title span {
+    color: #26BECE;
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
+  .categorySlct {
+    font-size: 0.9em;
+    display: inline-block;
+  }
+  .categorySlct a {
+    color: #138194;
+  }
+  .product-title .fa {
+    line-height: 20px;
+  }
+  .sorting{
+    background-color: transparent;
+  }
+  .sorting .container{
+    float: right;
+    width: auto;
+  }
+  .sort{
+    color: #999;
+    font-weight: normal;
+    font-size: 0.9em;
+  }
+  .sorting .dropbtn {
+    color: #333;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .sorting .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .sorting .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5%;
+  }
+  .sorting .dropdown-content a {
+    color: #333;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+    font-size: 0.9em;
+    height: 25%;
+    font-weight: normal;
+    border-radius: 5%;
+  }
+  .sorting .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: black;
+    text-decoration: none;
+  }
+  .sorting .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .sorting .dropdown:hover .dropbtn {
+    background-color: #eee;
+  }
+  .product-listview{
+    padding: 0;
+    margin-top: 15px;
+  }
+  .product-listview:hover::after{
+    opacity: 1;
+  }
+  .product-listview::before{
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #f00;
+    z-index: 99;
+    opacity: 0;
+  }
+  .product-listview a:hover{
+    color: #5a5a5a;
+    text-decoration: none;
+  }
+  .snow-bus-bg{
+    float: left;
+    width: 30%;
+    height: 234.3px;
+  }
+  .img-bg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  .bg1{
+    background-image: url(https://farm1.static.flickr.com/467/32534014540_fabc087350_c.jpg);
+  }
+  .bg2{
+    background-image: url(https://farm4.static.flickr.com/3798/11357743204_c4b8d07549_c.jpg);
+  }
+  .bg3{
+    background-image: url(https://farm8.static.flickr.com/7325/12300055124_f15e3849bc_c.jpg);
+  }
+  .bg4{
+    background-image: url(https://visualhunt.com/photos/xl/8/christmas-elf-father-christmas.jpg);
+  }
+  .snow-bus-intro{
+    width: 70%;
+    float: right;
+    padding: 15px 15px 0 15px;
+  }
+  .snow-bus-intro h4{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #222;
+  }
+  .snow-bus-intro p{
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 20px;
+    text-align: justify;
+    color: #444;
+  }
+  .place-container i, .product-place, .product-time{
+    display: inline-block;
+  }
+  .product-place, .product-time{
+    color: #444;
+    font-size: 0.8em;
+  }
+  .place-container i, .time-container i{
+    color: #d4d4d4;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  .comment-container{
+    margin-top: 30px;
+  }
+  .comment-container i,.comment-container h4, .text-primary, .text-grey-light{
+    display: inline-block;
+  }
+  .comment-container i{
+    color:#4FC9D2;
+    font-size: 0.7em;
+  }
+  .text-grey-light{
+    color: #bcbcbc;
+    font-size: 0.7em;
+  }
+  .comment-container h4, .text-primary-price{
+    float: right;
+  }
+  .comment-container h4{
+    font-size: 0.8em;
+    color: #AFAFAF;
+    font-weight: normal;
+    line-height: 28px;
+    margin-right: 5px;
+  }
+  .text-primary-price{
+    font-size: 1.2em;
+    color: #4FC9D2;
+  }
+  .fuckyou{
+    height: 1000px;
+    width: 100%;
+    background-color: #f00;
+  }
 }
